@@ -14,16 +14,12 @@ range(7, 6); // []
 function range(start, end) {
   debugger
  // const arr = [];
-  if (end < start) return []
+  if (end <= start) return []
  
-  //if (start >= end) 
- // if (start === end) return start
-  // else {
- // arr.push(start)
- // start++
- // }
-let length = end - start
-  return Array.from({length}, (_,i) => start + i)
+ 
+//let length = end - start            Solution 1
+ // return Array.from({length}, (_,i) => start + i)
+ return [start].concat(range(start + 1, end))
 }
 
 
