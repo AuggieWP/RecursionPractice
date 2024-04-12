@@ -13,11 +13,17 @@ range(7, 6); // []
 
 function range(start, end) {
   debugger
+ // const arr = [];
   if (end < start) return []
  
-  if (start === end) 
-  
-  return  [start, ...range(start + 1, end)]
+  //if (start >= end) 
+ // if (start === end) return start
+  // else {
+ // arr.push(start)
+ // start++
+ // }
+let length = end - start
+  return Array.from({length}, (_,i) => start + i)
 }
 
 
